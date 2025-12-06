@@ -1,98 +1,103 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Quarterly Earnings Report</title>
+<head>
+  <meta charset="utf-8">
+  <title>Quarterly Earnings – Interactive Presentation</title>
 
-    <!-- RevealJS CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/zenburn.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/plugin/highlight/monokai.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
-  </head>
+  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/math/math.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+</head>
 
-  <body>
-    <div class="reveal">
-      <div class="slides">
+<body>
+  <div class="reveal">
+    <div class="slides">
 
-        <!-- Title Slide -->
-        <section>
-          <h1>Quarterly Earnings Report</h1>
-          <p>Technical Consultant: <b>23f1001996@ds.study.iitm.ac.in</b></p>
-          23f1001996@ds.study.iitm.ac.in
-          <p class="fragment">Modern interactive presentation using RevealJS</p>
-          <aside class="notes">
-            Welcome the stakeholders and introduce the purpose of the quarterly earnings review.
-          </aside>
-        </section>
+      <!-- Slide 1 -->
+      <section>
+        <h2>Quarterly Earnings Report</h2>
+        <p>Email: <strong>23f1001996@ds.study.iitm.ac.in</strong></p>
+        <p class="fragment">Prepared by: Technical Consultant</p>
 
-        <!-- Markdown Slide -->
-        <section data-markdown>
-          <textarea data-template>
-### **Overview (Markdown Slide)**
+        <aside class="notes">
+          Introduce yourself and mention the purpose of the report.
+        </aside>
+      </section>
 
-- Revenue performance  
-- User growth trends  
-- Risk analysis  
-- Forecasting models  
+      <!-- Slide 2 – Markdown -->
+      <section data-markdown>
+        <textarea data-template>
+# KPI Summary (Markdown Slide)
+- Revenue Growth: **12%**
+- Operating Margin: **8%**
+- Cash Flow: **$4.2M**
 
 *This slide is written fully in Markdown.*
-          </textarea>
-        </section>
+        </textarea>
 
-        <!-- Animated Bullet Slide -->
-        <section>
-          <h2>Key Highlights</h2>
-          <ul>
-            <li class="fragment">Revenue increased by 12%</li>
-            <li class="fragment">Customer churn decreased</li>
-            <li class="fragment">Operational cost optimized by 8%</li>
-          </ul>
-          <aside class="notes">
-            Move through each highlight slowly for impact.
-          </aside>
-        </section>
+        <aside class="notes">
+          Explain key numbers briefly.
+        </aside>
+      </section>
 
-        <!-- Code Sample -->
-        <section>
-          <h2>Model Code (Python)</h2>
-          <pre><code class="language-python">
+      <!-- Slide 3 – Fragments -->
+      <section>
+        <h2>Retention Drivers</h2>
+        <ul>
+          <li class="fragment">Customer loyalty incentives</li>
+          <li class="fragment">Cross-sell improvements</li>
+          <li class="fragment">Digital engagement growth</li>
+        </ul>
+
+        <aside class="notes">
+          Reveal points one by one as you speak.
+        </aside>
+      </section>
+
+      <!-- Slide 4 – Code Highlighting -->
+      <section>
+        <h2>Sample Risk Model Code</h2>
+        <pre><code class="language-python">
 import pandas as pd
-import numpy as np
 
-df['growth_rate'] = df['revenue'].pct_change()
-print(df.head())
-          </code></pre>
-        </section>
+df = pd.read_csv("risk_scores.csv")
+df["risk_flag"] = df["score"].apply(lambda x: "HIGH" if x > 0.8 else "LOW")
+        </code></pre>
 
-        <!-- Math Slide -->
-        <section>
-          <h2>Financial Formula</h2>
-          <p>
-            ROI Formula:
-            \[
-              ROI = \frac{Net\ Profit}{Total\ Investment}
-            \]
-          </p>
-          <aside class="notes">
-            Explain ROI and why it matters this quarter.
-          </aside>
-        </section>
+        <aside class="notes">
+          Explain the basic idea of your analytical model.
+        </aside>
+      </section>
 
-      </div>
+      <!-- Slide 5 – Math -->
+      <section>
+        <h2>Financial Formula</h2>
+        <p>Net Present Value:</p>
+        <p>
+          \[
+          NPV = \sum_{t=1}^{n} \frac{C_t}{(1+r)^t}
+          \]
+        </p>
+
+        <aside class="notes">
+          Speak about the discount rate and cash flows.
+        </aside>
+      </section>
+
     </div>
+  </div>
 
-    <script>
-      Reveal.initialize({
-        hash: true,
-        slideNumber: true,
-        plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes ]
-      });
-    </script>
-  </body>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes ]
+    });
+  </script>
+</body>
 </html>
